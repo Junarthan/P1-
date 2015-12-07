@@ -1,22 +1,23 @@
-class Setup{
+class Setup {
   PVector location;
   float dia = 300;
   float x = 100;
   float y = 100;
-  
-  Setup(){
-    location = new PVector(x,y);
+
+  Setup() {
+    location = new PVector(x, y);
   }
-  
-  void display(){
-    fill(255);
-    rect(location.x,location.y,dia,dia);
-    fill(0);
-    textSize(16);
-    text("Setup Menu",location.x+150,location.y+150);
-    
+
+  void display() {
+    strokeWeight(4);
+    stroke(255);
     fill(#B20202);
-    ellipse(100,100,20,20);
-   }
-  
+    rect(location.x, location.y, dia, dia, 10);
+    fill(255);
+    textSize(16);
+    text("Setup Menu", location.x+10, location.y+30);
+
+    fill(#B20202);
+    ellipse(100, 100, 20, 20);
+  }
 }
