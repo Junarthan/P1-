@@ -3,7 +3,7 @@ Setup setup1;
 int state;
 
 void setup() {
-  size (500, 500);
+  size (800, 800);
 
   setup1 = new Setup();
   
@@ -32,8 +32,6 @@ void draw() {
   }*/
 }
 
-
-void mouseClicked() {
   if (state == 0) {
     if (mouseX < 465 && mouseX > 435 && mouseY < 65 && mouseY > 35)state = 1;
   }
