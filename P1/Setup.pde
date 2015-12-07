@@ -14,6 +14,9 @@ class Setup{
     fill(0);
     textSize(16);
     text("Setup Menu",location.x+150,location.y+150);
+    
+    fill(#B20202);
+    ellipse(100,100,20,20);
    }
   
 }

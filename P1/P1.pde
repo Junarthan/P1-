@@ -6,14 +6,14 @@ void setup() {
   size (800, 800);
 
   setup1 = new Setup();
-  
+
   state = 0;
 }
 
 
 void draw() {
   int diameter = 30;
-  
+
   background(#B20202);
   textSize(36);
   fill(255);
@@ -29,18 +29,15 @@ void draw() {
 
   if (state == 1) {
     setup1.display();
-  /*}else if(state == 0){
-    return;
-  }*/
+  }
 }
-}
+
 void mouseClicked () {
 
   if (state == 0) {
     if (mouseX < 465 && mouseX > 435 && mouseY < 65 && mouseY > 35)state = 1;
   }
-  /*if (state == 1) {
-    if (mouseX > 0 && mouseX < 100 || mouseX > 400 && mouseX < 500 
-    || mouseY > 0 && mouseY < 100 || mouseY > 400 && mouseY < 500);
-  }*/
+  if (state == 1) {
+    if (mouseX < 110 && mouseX > 90 && mouseY < 110 && mouseY > 90 )state = 0;
+  }
 }
