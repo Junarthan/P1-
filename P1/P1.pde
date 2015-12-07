@@ -33,6 +33,8 @@ void draw() {
     return;
   }*/
 }
+}
+void mouseClicked () {
 
   if (state == 0) {
     if (mouseX < 465 && mouseX > 435 && mouseY < 65 && mouseY > 35)state = 1;
