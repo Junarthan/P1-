@@ -1,15 +1,21 @@
 class Pages {
-  int mainX;
-  int mainY;
-  int mainW;
-  int mainH;
+  int[] main = new int[5];
+  int[] recipe = new int[5];
+
 
   Pages() {
 
-    mainW = 300;
-    mainH = 150;
-    mainX = width/2-(mainW/2);
-    mainY = height/2-(mainH/2);
+    main[0] = 300;  //width
+    main[1] = 150;  //heigth
+    main[2] = width/2-(main[0]/2);  //x position
+    main[3] = height/2-(main[1]/2);  //y position
+    main[4] = color(255, 0, 0);  //Color
+
+    recipe[0] = 100;
+    recipe[1] = 75;
+    recipe[2] = 900-(recipe[0]/2);
+    recipe[3] = 100-(recipe[1]/2);
+    recipe[4] = color(0, 255, 0);  //Color
   }
 
   void display() {
@@ -20,9 +26,10 @@ class Pages {
     stroke(255);
     fill(#B20202);
     ellipse(450, 50, diameter, diameter);
-    rect(mainX, mainY, mainW, mainH);
+    rect(main[2],main[3],main[0],main[1]);
+    rect(recipe[2], recipe[3], recipe[0], recipe[1]);
     fill(255);
-    text("Main Screen", mainX+50, mainY+50);
+    text("Main Screen", main[2]+50, main[3]+50);
     textSize(16);
     fill(0);
     fill(127);
@@ -32,7 +39,7 @@ class Pages {
     text("Setup", 430, 80);
   }
 
-  boolean insideRect() {    
-    return mainX <= mouseX && mouseX <= mainX+mainW && mainY <= mouseY && mouseY <= mainY+mainH ;
+  boolean insideRect(int[] button) {    
+    return button[2] <= mouseX && mouseX <= button[2]+button[0] && button[3] <= mouseY && mouseY <= button[3]+button[1];
   }
 }

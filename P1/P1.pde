@@ -22,8 +22,12 @@ void draw() {
 }
 
 void mousePressed() {
-  if (page1.insideRect() == true) {
+  println(state);
+  if (page1.insideRect(page1.main)) {
     state = 1;
+  }
+  if (page1.insideRect(page1.recipe)) {
+    state = 2;
   }
 }
 /*
