@@ -1,0 +1,5 @@
+class Recipes {
+  Recipes() {
+    
+  }
+}
