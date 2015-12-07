@@ -14,16 +14,18 @@ void setup() {
 void draw() {
   int diameter = 30;
   
-  background(0);
+  background(#B20202);
   textSize(36);
   fill(255);
   text("Main Screen", 140, 250);
 
-  fill(127);
+  strokeWeight(4);
+  stroke(255);
+  fill(#B20202);
   ellipse(450, 50, diameter, diameter);
   textSize(16);
   fill(255);
-  text("Setup", 430, 80);
+  text("Setup", 430, 85);
 
   if (state == 1) {
     setup1.display();
