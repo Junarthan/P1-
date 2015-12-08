@@ -3,7 +3,10 @@ class Button {
   int[] recipe = new int[5];
   int[] back = new int[5];
   int[] tempButton = new int[5];
+  int[] recip = new int[5];
+
   int[] closeRecipe = new int[4];
+  int[] recipButton = new int[4];
 
   Button() {
 
@@ -31,10 +34,22 @@ class Button {
     back[3] = 100-(recipe[1]/2);
     back[4] = color(0, 255, 0);  //Color
 
+    recip[0] =  824;  //width
+    recip[1] = 568;  //heigth
+    recip[2] = width/2-(recip[0]/2);  //x position
+    recip[3] = height/2-(recip[1]/2);  //y position
+    recip[4] = color(255, 0, 0);  //Color
+
+
     closeRecipe[0] = images.x1; //x
     closeRecipe[1] = images.y1; //y
     closeRecipe[2] = 50;//diameter
     closeRecipe[3] = color(150, 150, 0);//color
+
+    recipButton[0] = 800; //x
+    recipButton[1] = 50; //y
+    recipButton[2] = 30;//diameter
+    recipButton[3] = color(150, 150, 0);//color
   }
 
   void display(int[] button) {
@@ -45,14 +60,9 @@ class Button {
       fill(button[4]);
       rect(button[2], button[3], button[0], button[1]);
       fill(0);
-      //Alt text fjernes senere og vil blive inkoporeret i billeder/ikoner
-      textSize(16);
-      text("Main Screen", main[2]+50, main[3]+50);
     }
     if (button.length == 4) { //if circle
       stroke(255);
-      textSize(36);
-      fill(#B20202);
       fill(button[3]);
       ellipse(button[0], button[1], button[2], button[2]);
     }

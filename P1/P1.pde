@@ -26,6 +26,8 @@ void draw() {
     buttons.display(buttons.back);
   }
   if (state == 2) {
+    buttons.display(buttons.recipButton);
+    buttons.display(buttons.recip);
     buttons.display(buttons.back);
   }
   if (imgState == 1 && state == 1)
