@@ -14,6 +14,7 @@ void setup() {
 }
 
 void draw() {
+  println(buttons.mouseWithin(buttons.closeRecipe));
   bg.display();
   images.display();
   if (state == 0) {

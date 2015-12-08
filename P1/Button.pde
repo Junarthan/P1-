@@ -64,8 +64,8 @@ class Button {
       return button[2] <= mouseX && mouseX <= button[2]+button[0] && button[3] <= mouseY && mouseY <= button[3]+button[1];
     }
     if (button.length == 4) {
-      float closestX = constrain(mouseX, button[0], button[2]);
-      float closestY = constrain(mouseY, button[1], button[2]);
+      float closestX = constrain(mouseX, button[0], button[0]+button[2]);
+      float closestY = constrain(mouseY, button[1], button[1]+button[2]);
       float distance = dist(mouseX, mouseY, closestX, closestY);
       return distance < (button[2]/2);
     } else return false;
