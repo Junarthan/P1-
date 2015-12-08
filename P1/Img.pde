@@ -3,8 +3,8 @@ class Img {
   int y1;
 
   Img() {
-    x1 = 500;
-    y1 = 500;
+    x1 =100 ;
+    y1 = 200;
 
   }
   void display() {   

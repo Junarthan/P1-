@@ -18,13 +18,13 @@ class Button {
 
     recipe[0] = 100;
     recipe[1] = 75;
-    recipe[2] = 900-(recipe[0]/2);
+    recipe[2] = 700-(recipe[0]/2);
     recipe[3] = 100-(recipe[1]/2);
     recipe[4] = color(0, 255, 0);  
 
     tempButton[0] = 100;
     tempButton[1] = 75;
-    tempButton[2] = 700-(recipe[0]/2);
+    tempButton[2] = 500-(recipe[0]/2);
     tempButton[3] = 100-(recipe[1]/2);
     tempButton[4] = color(0, 255, 0);  
 
