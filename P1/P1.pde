@@ -1,43 +1,40 @@
 Setup setup1;
-Pages page1;
+Button buttons;
+Background bg;
 int state;
 
 void setup() {
   setup1 = new Setup();
-  page1 = new Pages();
+  buttons = new Button();
+  bg = new Background();
   state = 0;
   size (1024, 768);
 }
 
-
 void draw() {
-  int diameter = 30;
-
+  bg.display();
   if (state == 0) {
-    page1.display();
+    buttons.display(buttons.main);
   }
   if (state == 1) {
+    buttons.display(buttons.recipe);
     setup1.display();
+  }
+  if (state == 2) {
+    buttons.display(buttons.closeRecipe);
   }
 }
 
 void mousePressed() {
   println(state);
-  if (page1.insideRect(page1.main)) {
+  if (buttons.insideRect(buttons.main)) {
     state = 1;
   }
-  if (page1.insideRect(page1.recipe)) {
+  if (buttons.insideRect(buttons.recipe)) {
     state = 2;
   }
+  if (buttons.insideRect(buttons.closeRecipe))
+  {
+    state = 0;
+  }
 }
-/*
-void mouseClicked () {
- 
- if (state == 0) {
- if (mouseX < 465 && mouseX > 435 && mouseY < 65 && mouseY > 35)state = 1;
- }
- if (state == 1) {
- if (mouseX < 110 && mouseX > 90 && mouseY < 110 && mouseY > 90 )state = 0;
- }
- }
- */
