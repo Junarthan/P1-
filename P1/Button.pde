@@ -2,6 +2,7 @@ class Button {
   int[] main = new int[5];
   int[] recipe = new int[5];
   int[] back = new int[5];
+  int[] tempButton = new int[5];
   int[] closeRecipe = new int[4];
 
   Button() {
@@ -18,14 +19,20 @@ class Button {
     recipe[3] = 100-(recipe[1]/2);
     recipe[4] = color(0, 255, 0);  
 
+    tempButton[0] = 100;
+    tempButton[1] = 75;
+    tempButton[2] = 700-(recipe[0]/2);
+    tempButton[3] = 100-(recipe[1]/2);
+    tempButton[4] = color(0, 255, 0);  
+
     back[0] = 100;
     back[1] = 75;
     back[2] = 100-(recipe[0]/2);
     back[3] = 100-(recipe[1]/2);
     back[4] = color(0, 255, 0);  //Color
 
-    closeRecipe[0] = recipe[2]; //x
-    closeRecipe[1] = recipe[3];//y
+    closeRecipe[0] = images.x1; //x
+    closeRecipe[1] = images.y1; //y
     closeRecipe[2] = 50;//diameter
     closeRecipe[3] = color(150, 150, 0);//color
   }
@@ -38,24 +45,21 @@ class Button {
       fill(button[4]);
       rect(button[2], button[3], button[0], button[1]);
       fill(0);
+      //Alt text fjernes senere og vil blive inkoporeret i billeder/ikoner
       textSize(16);
       text("Main Screen", main[2]+50, main[3]+50);
     }
     if (button.length == 4) { //if circle
       stroke(255);
-      int diameter = 30;
       textSize(36);
       fill(#B20202);
       fill(button[3]);
       ellipse(button[0], button[1], button[2], button[2]);
-      textSize(16);
-      fill(255);
-      text("Setup", 430, 80);
     }
   }
 
 
-  boolean insideRect(int[] button) {    
+  boolean mouseWithin(int[] button) {    
     if (button.length == 5) {
       return button[2] <= mouseX && mouseX <= button[2]+button[0] && button[3] <= mouseY && mouseY <= button[3]+button[1];
     }
