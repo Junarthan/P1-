@@ -20,7 +20,7 @@ class Background {
     }
     if (state == 3) {
       background(pictures[0]);
-      text("screen 4, start game(?)", 50, 50);
+      text("screen 4, achievements", 50, 50);
     }
   }
 }

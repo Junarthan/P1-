@@ -10,6 +10,7 @@ class Img {
     imageMode(NORMAL);
     if (state == 1) {    
       image(pictures[3], buttons.tempButton[2], buttons.tempButton[3]);
+      image(pictures[2], buttons.achievementButton[2], buttons.achievementButton[3]);
       image(pictures[2], buttons.recipe[2], buttons.recipe[3]);
     }
     if (state > 1) {      
