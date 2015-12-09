@@ -4,6 +4,7 @@ class Button {
   int[] back = new int[5];
   int[] recipe = new int[5];
   int[] recip = new int[5];
+  int[] startGameButton = new int[5];
 
   int[] closeRec = new int[4];
   int[] recipButton = new int[4];
@@ -34,12 +35,17 @@ class Button {
     back[3] = 100-(tempButton[1]/2);
     back[4] = color(0, 255, 0);  //Color
 
-    recip[0] =  824;  //width
+    recip[0] = 824;  //width
     recip[1] = 568;  //heigth
     recip[2] = width/2-(recip[0]/2);  //x position
     recip[3] = height/2-(recip[1]/2);  //y position
     recip[4] = color(255, 0, 0);  //Color
 
+    startGameButton[0] = 300; //width
+    startGameButton[1] = 75; //height
+    startGameButton[2] = width/2-(startGameButton[0]/2); //x position
+    startGameButton[3] = height/2-(startGameButton[1]/2); //y position
+    startGameButton[4] = color(200, 200, 0); //color
 
     closeRec[0] = images.x1; //x
     closeRec[1] = images.y1; //y
@@ -71,7 +77,8 @@ class Button {
 
   boolean mouseWithin(int[] button) {    
     if (button.length == 5) {
-      return button[2] <= mouseX && mouseX <= button[2]+button[0] && button[3] <= mouseY && mouseY <= button[3]+button[1];
+      return button[2] <= mouseX && mouseX <= button[2]+button[0] && button[3] 
+      <= mouseY && mouseY <= button[3]+button[1];
     }
     if (button.length == 4) {
       float closestX = constrain(mouseX, button[0], button[0]+button[2]);

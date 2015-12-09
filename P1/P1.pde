@@ -1,14 +1,14 @@
 Img images;
 PImage[] pictures;
 Button buttons;
-Background bg;
+Background backgrounds;
 int state;
 int imgState;
 
 void setup() {
   images = new Img();
   buttons = new Button();
-  bg = new Background();
+  backgrounds = new Background();
   pictures = new PImage[10];
   pictures[0] = loadImage("BG1.png");
   pictures[1] = loadImage("ReturnB.png");
@@ -23,14 +23,15 @@ void setup() {
 
 void draw() {
   println(buttons.mouseWithin(buttons.closeRec));
-  bg.display();
-//ALT BUTTON DISPLAY FJERNES SENERE OG ERSTATTES MED BILLEDER FRA IMG CLASS
+  backgrounds.display();
+  //ALT BUTTON DISPLAY FJERNES SENERE OG ERSTATTES MED BILLEDER FRA IMG CLASS
   if (state == 0) {
     buttons.display(buttons.main);
   }
   if (state == 1) {
     buttons.display(buttons.tempButton);
     buttons.display(buttons.recipe);
+    buttons.display(buttons.startGameButton);
   }
   if (state == 2) {
     buttons.display(buttons.recipButton);
@@ -40,11 +41,14 @@ void draw() {
   if (imgState == 1 && state == 1) {   
     buttons.display(buttons.closeRec);
   }
-  
+  if (state == 3) {
+    buttons.display(buttons.back);
+  }
+
   images.display();
 }
 
-void mousePressed() {
+void mouseReleased() {
   println(state);
   if (buttons.mouseWithin(buttons.main )&& state == 0) {
     state = 1;
@@ -61,7 +65,11 @@ void mousePressed() {
     if (buttons.mouseWithin(buttons.tempButton)) {
       state = 2;
     }
+    if (buttons.mouseWithin(buttons.startGameButton)) {
+      state = 3;
+    }
   }
+
   if (buttons.mouseWithin(buttons.back) && state > 1)
     state = 1;
 }

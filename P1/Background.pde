@@ -18,5 +18,9 @@ class Background {
       background(pictures[0]);
       text("screen 3, recipe screen?", 50, 50);
     }
+    if (state == 3) {
+      background(pictures[0]);
+      text("screen 4, start game(?)", 50, 50);
+    }
   }
 }
