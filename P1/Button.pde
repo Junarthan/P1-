@@ -1,11 +1,11 @@
 class Button {
   int[] main = new int[5];
-  int[] recipe = new int[5];
-  int[] back = new int[5];
   int[] tempButton = new int[5];
+  int[] back = new int[5];
+  int[] recipe = new int[5];
   int[] recip = new int[5];
 
-  int[] closeRecipe = new int[4];
+  int[] closeRec = new int[4];
   int[] recipButton = new int[4];
 
   Button() {
@@ -16,22 +16,22 @@ class Button {
     main[3] = height/2-(main[1]/2);  //y position
     main[4] = color(255, 0, 0);  //Color
 
-    recipe[0] = 100;
-    recipe[1] = 75;
-    recipe[2] = 700-(recipe[0]/2);
-    recipe[3] = 100-(recipe[1]/2);
-    recipe[4] = color(0, 255, 0);  
-
     tempButton[0] = 100;
     tempButton[1] = 75;
-    tempButton[2] = 500-(recipe[0]/2);
-    tempButton[3] = 100-(recipe[1]/2);
+    tempButton[2] = 700-(tempButton[0]/2);
+    tempButton[3] = 100-(tempButton[1]/2);
     tempButton[4] = color(0, 255, 0);  
+
+    recipe[0] = 100;
+    recipe[1] = 75;
+    recipe[2] = 500-(tempButton[0]/2);
+    recipe[3] = 100-(tempButton[1]/2);
+    recipe[4] = color(0, 255, 0);  
 
     back[0] = 100;
     back[1] = 75;
-    back[2] = 100-(recipe[0]/2);
-    back[3] = 100-(recipe[1]/2);
+    back[2] = 100-(tempButton[0]/2);
+    back[3] = 100-(tempButton[1]/2);
     back[4] = color(0, 255, 0);  //Color
 
     recip[0] =  824;  //width
@@ -41,10 +41,10 @@ class Button {
     recip[4] = color(255, 0, 0);  //Color
 
 
-    closeRecipe[0] = images.x1; //x
-    closeRecipe[1] = images.y1; //y
-    closeRecipe[2] = 50;//diameter
-    closeRecipe[3] = color(150, 150, 0);//color
+    closeRec[0] = images.x1; //x
+    closeRec[1] = images.y1; //y
+    closeRec[2] = 50;//diameter
+    closeRec[3] = color(150, 150, 0);//color
 
     recipButton[0] = 800; //x
     recipButton[1] = 50; //y

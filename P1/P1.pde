@@ -1,4 +1,5 @@
 Img images;
+PImage[] pictures;
 Button buttons;
 Background bg;
 int state;
@@ -8,15 +9,22 @@ void setup() {
   images = new Img();
   buttons = new Button();
   bg = new Background();
+  pictures = new PImage[10];
+  pictures[0] = loadImage("BG1.png");
+  pictures[1] = loadImage("ReturnB.png");
+  pictures[2] = loadImage("FillerB.png");
+  pictures[3] = loadImage("RecipeB.png");
+  pictures[4] = loadImage("Pop1.png");
+  pictures[5] = loadImage("round1.png");
   state = 0;
   imgState = 0;
   size (768, 1024);
 }
 
 void draw() {
-  println(buttons.mouseWithin(buttons.closeRecipe));
+  println(buttons.mouseWithin(buttons.closeRec));
   bg.display();
-  images.display();
+//ALT BUTTON DISPLAY FJERNES SENERE OG ERSTATTES MED BILLEDER FRA IMG CLASS
   if (state == 0) {
     buttons.display(buttons.main);
   }
@@ -29,8 +37,11 @@ void draw() {
     buttons.display(buttons.recip);
     buttons.display(buttons.back);
   }
-  if (imgState == 1 && state == 1)
-    buttons.display(buttons.closeRecipe);
+  if (imgState == 1 && state == 1) {   
+    buttons.display(buttons.closeRec);
+  }
+  
+  images.display();
 }
 
 void mousePressed() {
@@ -43,7 +54,7 @@ void mousePressed() {
     if (buttons.mouseWithin(buttons.recipe)) {
       imgState = 1;
     }
-    if (buttons.mouseWithin(buttons.closeRecipe))
+    if (buttons.mouseWithin(buttons.closeRec))
     { 
       imgState = 0;
     }
