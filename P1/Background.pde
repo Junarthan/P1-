@@ -22,5 +22,21 @@ class Background {
       background(pictures[0]);
       text("screen 4, achievements", 50, 50);
     }
+    if (state == 4) {
+      background(pictures[0]);
+      text("screen 5, start cooking", 50, 50);
+    }
+    if (state == 5) {
+      background(pictures[0]);
+      text("screen 6, recipe under start cooking", 50, 50);
+    }
+    if (state == 6) {
+      background(pictures[0]);
+      text("screen 7, cooking techniques", 50, 50);
+    }
+    if (state == 7) {
+      background(pictures[0]);
+      text("screen 8, ingredients info", 50, 50);
+    }
   }
 }

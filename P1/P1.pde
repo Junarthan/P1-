@@ -56,6 +56,12 @@ void draw() {
     buttons.display(buttons.back);
     achievement.display();
   }
+  if (state == 4) {
+    buttons.display(buttons.back2);
+    buttons.display(buttons.tempButton);
+    buttons.display(buttons.cookingTechniques);
+    buttons.display(buttons.ingredientsInfo);
+  }
 
   images.display();
 }
@@ -81,9 +87,36 @@ void mouseReleased() {
       state = 3;
     }
     if (buttons.mouseWithin(buttons.startGameButton)) {
-      state = 0;
+      state = 4;
     }
   }
-  if (buttons.mouseWithin(buttons.back) && state > 1)
+  if (buttons.mouseWithin(buttons.back) && state == 1) {
     state = 1;
+  }
+  if (buttons.mouseWithin(buttons.back) && state == 2) {
+    state = 1;
+  }
+  if (buttons.mouseWithin(buttons.back) && state == 3) {
+    state = 1;
+  }
+  if (buttons.mouseWithin(buttons.back) && state == 4) {
+    state = 1;
+  }
+  //GAME START. Cooking thing here
+  if (state == 4) {
+    if (buttons.mouseWithin(buttons.tempButton)) {
+      state = 5;
+    }
+    if (buttons.mouseWithin(buttons.cookingTechniques)) {
+      state = 6;
+    }
+    if (buttons.mouseWithin(buttons.ingredientsInfo)) {
+      state = 7;
+    }
+  }
+  if (state == 5 || state == 6 || state == 7) {
+    if (buttons.mouseWithin(buttons.back2)) {
+      state = 4;
+    }
+  }
 }

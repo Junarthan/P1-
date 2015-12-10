@@ -2,10 +2,13 @@ class Button {
   int[] main = new int[5];
   int[] tempButton = new int[5];
   int[] back = new int[5];
+  int[] back2 = new int[5];
   int[] recipe = new int[5];
   int[] recip = new int[5];
   int[] startGameButton = new int[5];
   int[] achievementButton = new int[5];
+  int[] cookingTechniques = new int[5];
+  int[] ingredientsInfo = new int[5];
 
   int[] closeRec = new int[4];
   int[] recipButton = new int[4];
@@ -41,6 +44,12 @@ class Button {
     back[2] = 100-(tempButton[0]/2);
     back[3] = 100-(tempButton[1]/2);
     back[4] = color(0, 255, 0);  //Color
+    
+    back2[0] = 100;
+    back2[1] = 75;
+    back2[2] = 100-(tempButton[0]/2);
+    back2[3] = 100-(tempButton[1]/2);
+    back2[4] = color(0, 255, 0);  //Color
 
     recip[0] = 568;  //width
     recip[1] = 824;  //heigth
@@ -63,6 +72,18 @@ class Button {
     recipButton[1] = 50; //y
     recipButton[2] = 30;//diameter
     recipButton[3] = color(150, 150, 0);//color
+    
+    cookingTechniques[0] = 300; //width
+    cookingTechniques[1] = 75; //height
+    cookingTechniques[2] = width/2-(cookingTechniques[0]/2); //x position
+    cookingTechniques[3] = height/2+100-(cookingTechniques[1]/2); //y position
+    cookingTechniques[4] = color(0, 200, 0); //color
+    
+    ingredientsInfo[0] = 300; //width
+    ingredientsInfo[1] = 75; //height
+    ingredientsInfo[2] = width/2-(ingredientsInfo[0]/2); //x position
+    ingredientsInfo[3] = height/2+200-(ingredientsInfo[1]/2); //y position
+    ingredientsInfo[4] = color(0, 200, 0); //color
   }
 
   void display(int[] button) {

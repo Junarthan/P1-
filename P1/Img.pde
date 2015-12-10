@@ -23,5 +23,11 @@ class Img {
       image(pictures[5], x1, y1);
       imageMode(NORMAL);
     }
+    if(state == 4){
+      image(pictures[3], buttons.tempButton[2], buttons.tempButton[3]);
+    }
+    if (state == 5) {      
+      image(pictures[1], buttons.back2[2], buttons.back2[3]);
+    }
   }
 }
