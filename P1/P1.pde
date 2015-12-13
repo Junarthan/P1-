@@ -36,21 +36,21 @@ void draw() {
   println(state);
   //ALT BUTTON DISPLAY FJERNES SENERE OG ERSTATTES MED BILLEDER FRA IMG CLASS
   if (state == 0) {
-    buttons.display(buttons.main);
+    buttons.display(buttons.initialStart);
   }
   if (state == 1) {
-    buttons.display(buttons.tempButton);
+    buttons.display(buttons.recipeButton);
     buttons.display(buttons.achievementButton);
-    buttons.display(buttons.recipe);
+    buttons.display(buttons.popupButton);
     buttons.display(buttons.startGameButton);
   }
   if (state == 2) {
-    buttons.display(buttons.recipButton);
-    buttons.display(buttons.recip);
+    buttons.display(buttons.yellowOverlay);
+    buttons.display(buttons.recipeBox);
     buttons.display(buttons.back);
   }
   if (imgState == 1 && state == 1) {   
-    buttons.display(buttons.closeRec);
+    buttons.display(buttons.closePopup);
   }
   if (state == 3) {
     buttons.display(buttons.back);
@@ -58,7 +58,7 @@ void draw() {
   }
   if (state == 4) {
     buttons.display(buttons.back2);
-    buttons.display(buttons.tempButton);
+    buttons.display(buttons.recipeButton);
     buttons.display(buttons.cookingTechniques);
     buttons.display(buttons.ingredientsInfo);
   }
@@ -67,19 +67,19 @@ void draw() {
 }
 
 void mouseReleased() {
-  if (buttons.mouseWithin(buttons.main )&& state == 0) {
+  if (buttons.mouseWithin(buttons.initialStart )&& state == 0) {
     state = 1;
   }
 
   if (state == 1) {
-    if (buttons.mouseWithin(buttons.recipe)) {
+    if (buttons.mouseWithin(buttons.popupButton)) {
       imgState *= -1;
     }
-    if (buttons.mouseWithin(buttons.closeRec))
+    if (buttons.mouseWithin(buttons.closePopup))
     { 
       imgState *= -1;
     }
-    if (buttons.mouseWithin(buttons.tempButton)) {
+    if (buttons.mouseWithin(buttons.recipeButton)) {
       imgState = -1;
       state = 2;
     }
@@ -104,7 +104,7 @@ void mouseReleased() {
   }
   //GAME START. Cooking thing here
   if (state == 4) {
-    if (buttons.mouseWithin(buttons.tempButton)) {
+    if (buttons.mouseWithin(buttons.recipeButton)) {
       state = 5;
     }
     if (buttons.mouseWithin(buttons.cookingTechniques)) {

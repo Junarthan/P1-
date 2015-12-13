@@ -1,61 +1,61 @@
 class Button {
-  int[] main = new int[5];
-  int[] tempButton = new int[5];
+  int[] initialStart = new int[5];
+  int[] recipeButton = new int[5];
   int[] back = new int[5];
   int[] back2 = new int[5];
-  int[] recipe = new int[5];
-  int[] recip = new int[5];
+  int[] popupButton = new int[5];
+  int[] recipeBox = new int[5];
   int[] startGameButton = new int[5];
   int[] achievementButton = new int[5];
   int[] cookingTechniques = new int[5];
   int[] ingredientsInfo = new int[5];
 
-  int[] closeRec = new int[4];
-  int[] recipButton = new int[4];
+  int[] closePopup = new int[4];
+  int[] yellowOverlay = new int[4];
 
   Button() {
 
-    main[0] = 300;  //width
-    main[1] = 150;  //heigth
-    main[2] = width/2-(main[0]/2);  //x position
-    main[3] = height/2-(main[1]/2);  //y position
-    main[4] = color(255, 0, 0);  //Color
+    initialStart[0] = 300;  //width
+    initialStart[1] = 150;  //heigth
+    initialStart[2] = width/2-(initialStart[0]/2);  //x position
+    initialStart[3] = height/2-(initialStart[1]/2);  //y position
+    initialStart[4] = color(255, 0, 0);  //Color
 
-    tempButton[0] = 100;
-    tempButton[1] = 75;
-    tempButton[2] = 700-(tempButton[0]/2);
-    tempButton[3] = 100-(tempButton[1]/2);
-    tempButton[4] = color(0, 255, 0);  
+    recipeButton[0] = 100;
+    recipeButton[1] = 75;
+    recipeButton[2] = 700-(recipeButton[0]/2);
+    recipeButton[3] = 100-(recipeButton[1]/2);
+    recipeButton[4] = color(0, 255, 0);  
 
     achievementButton[0] = 100;
     achievementButton[1] = 75;
-    achievementButton[2] = 600-(tempButton[0]/2);
-    achievementButton[3] = 100-(tempButton[1]/2);
+    achievementButton[2] = 600-(recipeButton[0]/2);
+    achievementButton[3] = 100-(recipeButton[1]/2);
     achievementButton[4] = color(0, 255, 0);  
     
-    recipe[0] = 100;
-    recipe[1] = 75;
-    recipe[2] = 500-(tempButton[0]/2);
-    recipe[3] = 100-(tempButton[1]/2);
-    recipe[4] = color(0, 255, 0);  
+    popupButton[0] = 100;
+    popupButton[1] = 75;
+    popupButton[2] = 500-(recipeButton[0]/2);
+    popupButton[3] = 100-(recipeButton[1]/2);
+    popupButton[4] = color(0, 255, 0);  
 
     back[0] = 100;
     back[1] = 75;
-    back[2] = 100-(tempButton[0]/2);
-    back[3] = 100-(tempButton[1]/2);
+    back[2] = 100-(recipeButton[0]/2);
+    back[3] = 100-(recipeButton[1]/2);
     back[4] = color(0, 255, 0);  //Color
     
     back2[0] = 100;
     back2[1] = 75;
-    back2[2] = 100-(tempButton[0]/2);
-    back2[3] = 100-(tempButton[1]/2);
+    back2[2] = 100-(recipeButton[0]/2);
+    back2[3] = 100-(recipeButton[1]/2);
     back2[4] = color(0, 255, 0);  //Color
 
-    recip[0] = 568;  //width
-    recip[1] = 824;  //heigth
-    recip[2] = width/2-(recip[0]/2);  //x position
-    recip[3] = height/2-(recip[1]/2);  //y position
-    recip[4] = color(255, 0, 0);  //Color
+    recipeBox[0] = 568;  //width
+    recipeBox[1] = 824;  //heigth
+    recipeBox[2] = width/2-(recipeBox[0]/2);  //x position
+    recipeBox[3] = height/2-(recipeBox[1]/2);  //y position
+    recipeBox[4] = color(255, 0, 0);  //Color
 
     startGameButton[0] = 300; //width
     startGameButton[1] = 75; //height
@@ -63,15 +63,15 @@ class Button {
     startGameButton[3] = height/2+200-(startGameButton[1]/2); //y position
     startGameButton[4] = color(200, 200, 0); //color
 
-    closeRec[0] = images.x1; //x
-    closeRec[1] = images.y1; //y
-    closeRec[2] = 50;//diameter
-    closeRec[3] = color(150, 150, 0);//color
+    closePopup[0] = images.x1; //x
+    closePopup[1] = images.y1; //y
+    closePopup[2] = 50;//diameter
+    closePopup[3] = color(150, 150, 0);//color
 
-    recipButton[0] = 800; //x
-    recipButton[1] = 50; //y
-    recipButton[2] = 30;//diameter
-    recipButton[3] = color(150, 150, 0);//color
+    yellowOverlay[0] = 800; //x
+    yellowOverlay[1] = 50; //y
+    yellowOverlay[2] = 30;//diameter
+    yellowOverlay[3] = color(150, 150, 0);//color
     
     cookingTechniques[0] = 300; //width
     cookingTechniques[1] = 75; //height

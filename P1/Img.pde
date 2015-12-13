@@ -9,9 +9,9 @@ class Img {
   void display() {
     imageMode(NORMAL);
     if (state == 1) {    
-      image(pictures[3], buttons.tempButton[2], buttons.tempButton[3]);
+      image(pictures[3], buttons.recipeButton[2], buttons.recipeButton[3]);
       image(pictures[2], buttons.achievementButton[2], buttons.achievementButton[3]);
-      image(pictures[2], buttons.recipe[2], buttons.recipe[3]);
+      image(pictures[2], buttons.popupButton[2], buttons.popupButton[3]);
     }
     if (state > 1) {      
       image(pictures[1], buttons.back[2], buttons.back[3]);
@@ -24,7 +24,7 @@ class Img {
       imageMode(NORMAL);
     }
     if(state == 4){
-      image(pictures[3], buttons.tempButton[2], buttons.tempButton[3]);
+      image(pictures[3], buttons.recipeButton[2], buttons.recipeButton[3]);
     }
     if (state == 5) {      
       image(pictures[1], buttons.back2[2], buttons.back2[3]);
